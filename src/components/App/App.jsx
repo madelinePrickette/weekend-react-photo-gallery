@@ -1,7 +1,19 @@
 import React from 'react';
 import './App.css';
+import {useState, useEffect} from 'react';
+import axios from 'axios';
 
 function App() {
+
+  const [picList, setPicList] = useState([]);
+
+  const retrievePics = () => {
+    axios({
+      method: 'GET',
+      url: '/'
+    })
+  }
+
     return (
       <div className="App">
         <header className="App-header">
