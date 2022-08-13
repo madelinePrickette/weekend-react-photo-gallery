@@ -13,9 +13,12 @@ function GalleryList({galleryList, retrievePics}) {
         axios({
             method: 'PUT',
             url: `/gallery/like/${pic.id}`
-        }) // 
+        }) // here, we are using the route gallery, like, then the pic id to  
+        // target the specific item component so it can delete itself.
         .then((response) => {
             retrievePics()
+            // Here we call retrieve pics so it can refresh with updated 
+            // info on the DOM. new info being likeCount.
         }).catch((err) => {
             console.error(err);
         })
@@ -23,7 +26,6 @@ function GalleryList({galleryList, retrievePics}) {
 
     return(
         <>
-            <h3>Image</h3>
             <ul>
                 {galleryList.map((pic) => ( 
                     // Mapping is like a for loop. This adds each GalleryItem component to the list.
