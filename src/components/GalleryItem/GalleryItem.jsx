@@ -10,7 +10,7 @@ function GalleryItem({pic, likeCounter}) {
         <>
             <div onClick={() => setImageClicked(!imageClicked)}>
                 {/* Ternary operators to switch between image and description, ? asks "if true" and : represents "else" */}
-                {imageClicked === true ? <><p>{pic.description}</p></> : <><img src={pic.path} ></img></>}
+                {imageClicked === true ? <><p className="pTagSize">{pic.description}</p></> : <><img src={pic.path} ></img></>}
             </div>
             <><button onClick={() => likeCounter(pic)}>Like</button><p>Likes: {pic.likes}</p></>
         </>

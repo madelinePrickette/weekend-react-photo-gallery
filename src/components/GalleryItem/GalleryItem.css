@@ -1,7 +1,12 @@
 img {
-    height: 100px
+    height: 200px
 }
 
 ul {
     list-style: none;
+    padding-left: 0px
+}
+
+.pTagSize {
+    height: 188px
 }
