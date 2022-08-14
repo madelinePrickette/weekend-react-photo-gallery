@@ -9,13 +9,15 @@ function GalleryItem({pic, likeCounter, deletePic}) {
 
     console.log(imageClicked); // Should show true or false in the console
     return(
-        <>
-            <div onClick={() => setImageClicked(!imageClicked)}>
-                {/* Ternary operators to switch between image and description, ? asks "if true" and : represents "else" */}
-                {imageClicked === true ? <p className="pTagSize">{pic.description}</p> : <img src={pic.path} ></img>}
+        <div className='spacing-posts'>
+            <div className='post-border'>
+                <div onClick={() => setImageClicked(!imageClicked)} className='top-margin'>
+                    {/* Ternary operators to switch between image and description, ? asks "if true" and : represents "else" */}
+                    {imageClicked === true ? <p className="pTagSize">{pic.description}</p> : <img src={pic.path}></img>}
+                </div>
+                <div className='bottom-margin'><div className='inline padding-right-270'><button onClick={() => likeCounter(pic)} className="inline margin-right-7">❤️</button><p className='inline'>Likes: {pic.likes}</p></div><button onClick={() => deletePic(pic)} className='inline'>Delete</button></div>
             </div>
-            <><button onClick={() => likeCounter(pic)}>❤️</button><p>Likes: {pic.likes}</p><button onClick={() => deletePic(pic)}>Delete</button></>
-        </>
+        </div>
     )
 }
 

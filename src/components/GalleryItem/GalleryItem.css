@@ -1,5 +1,5 @@
 img {
-    height: 200px;
+    height: 550px;
 }
 
 ul {
@@ -8,5 +8,38 @@ ul {
 }
 
 .pTagSize {
-    height: 188px;
+    height: 540px;
+}
+
+.post-border {
+    border: #eeebf3 solid 1px;
+    margin-bottom: 45px;
+    width: 412.5px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.inline {
+    display: inline;
+}
+
+.padding-right-270 {
+    padding-right: 255px;
+}
+
+.margin-right-7 {
+    margin-right: 7px;
+}
+
+.bottom-margin {
+    margin-bottom: 3px;
+}
+
+.top-margin {
+    margin-top: 35px;
+}
+
+.spacing-posts {
+    padding-left: 33%;
+    padding-right: 33%;
 }
