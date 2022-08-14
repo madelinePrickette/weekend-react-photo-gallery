@@ -58,3 +58,14 @@
   font-family: 'Rubik', sans-serif;
 }
 
+.bottom-div {
+  background-color: white;
+  padding-top: 1px;
+  border-top: #eeebf3 solid 1px;
+}
+
+.text-size-color {
+  font-size: 13px;
+  color: #cecbd2;
+  font-family: 'Rubik', sans-serif;
+}

@@ -40,6 +40,7 @@ function App() {
         </header>
         <GalleryList galleryList={picList} retrievePics={retrievePics}/>
         {/* Passing to GalleryList to be used for mapping */}
+        <div className='bottom-div'><p className='text-size-color'>Created by Madeline Prickette</p></div>
       </div>
     );
 }
