@@ -34,6 +34,28 @@ router.put('/like/:id', (req, res) => {
     // res.sendStatus(200);
 }); // END PUT Route
 
+// START OF SERVER DELETE ROUTE
+router.delete('/:id', (req, res) => {
+    const galleryId = req.params.id;
+    console.log(galleryId); // component id just like in put. 
+    // This targets the component
+
+    let queryText =
+    `
+    DELETE FROM "gallery"
+    WHERE "id" = $1;
+    `
+
+    // QUERY GOES HERE
+    pool.query(queryText, [galleryId])
+        .then( (result) => {
+            res.sendStatus(204)
+        }).catch( (err) => {
+            console.error('ERROR IN SERVER DELETE', err)
+            res.sendStatus(500);
+        });
+})
+
 // GET Route after transferring data to db ----------
 router.get('/', (req, res) => {
     console.log('in /GET');

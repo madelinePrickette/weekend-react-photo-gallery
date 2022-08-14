@@ -25,15 +25,26 @@ function GalleryList({galleryList, retrievePics}) {
         })
     }
 
-
-
+    // CLIENT DELETE GOES HERE!!
+    const deletePic = (pic) => {
+        // passing pic as an arguement to the function for when 
+        // it is given to the GalleryItem via props
+        axios({
+            method: "DELETE",
+            url: `/gallery/${pic.id}`
+        }) .then( (response) => {
+            retrievePics()
+        }).catch( (err) => {
+            console.error(err)
+        })
+    }
 
     return(
         <>
             <ul>
                 {galleryList.map((pic) => ( 
                     // Mapping is like a for loop. This adds each GalleryItem component to the list.
-                    <li key={pic.id}><GalleryItem pic={pic} likeCounter={likeCounter}/></li>
+                    <li key={pic.id}><GalleryItem pic={pic} likeCounter={likeCounter} deletePic={deletePic}/></li>
                     // Include a key wherever map is used.
                 ))}
             </ul>
