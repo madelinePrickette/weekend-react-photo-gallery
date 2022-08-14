@@ -1,5 +1,5 @@
 img {
-    height: 200px;
+    height: 550px;
 }
 
 ul {
@@ -8,5 +8,60 @@ ul {
 }
 
 .pTagSize {
-    height: 188px;
+    height: 550px;
+    margin: 0px;
+    text-align: left;
+    padding-left: 11px;
+    font-family: 'Rubik', sans-serif;
+    color: #b6b3ba
+}
+
+.post-border {
+    border: #eeebf3 solid 1px;
+    margin-bottom: 45px;
+    width: 412.5px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.inline {
+    display: inline;
+}
+
+.padding-right-270 {
+    padding-right: 255px;
+}
+
+.margin-right-7 {
+    margin-right: 7px;
+}
+
+.bottom-margin {
+    margin-bottom: 3px;
+}
+
+.top-margin {
+    margin-top: 10px;
+}
+
+.spacing-posts {
+    padding-left: 33%;
+    padding-right: 33%;
+}
+
+.postition-name {
+    padding-right: 280px;
+    margin: 10px;
+    font-family: 'Rubik', sans-serif;
+    color: #464447
+}
+
+.traditional-text {
+    font-family: 'Rubik', sans-serif;
+    color: #464447
+}
+
+.button-radius {
+    border-radius: 50px;
+    border-width: 0px;
 }
