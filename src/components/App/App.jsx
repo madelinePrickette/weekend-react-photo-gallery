@@ -32,7 +32,7 @@ function App() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
+          <h1 className="App-title">Catstagram</h1>
         </header>
         <GalleryList galleryList={picList} retrievePics={retrievePics}/>
         {/* Passing to GalleryList to be used for mapping */}
