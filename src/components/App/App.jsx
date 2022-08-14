@@ -3,6 +3,7 @@ import './App.css';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList.jsx'
+import Form from '../Form/Form';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
             <img className="headerImage inline-block" src="images/profile-img.jpg"/>
           </div>
         </header>
+        <Form retrievePics={retrievePics}/>
         <GalleryList galleryList={picList} retrievePics={retrievePics}/>
         {/* Passing to GalleryList to be used for mapping */}
         <div className='bottom-div'><p className='text-size-color'>Created by Madeline Prickette</p></div>
