@@ -65,3 +65,8 @@ ul {
     border-radius: 50px;
     border-width: 0px;
 }
+
+.image-borders {
+    border-top: #eeebf3 solid 1px;
+    border-bottom: #eeebf3 solid 1px;
+}

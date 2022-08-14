@@ -14,7 +14,7 @@ function GalleryItem({pic, likeCounter, deletePic}) {
                 <p className='postition-name'>urstrayedaway</p>
                 <div onClick={() => setImageClicked(!imageClicked)} className='top-margin'>
                     {/* Ternary operators to switch between image and description, ? asks "if true" and : represents "else" */}
-                    {imageClicked === true ? <p className="pTagSize">{pic.description}</p> : <img src={pic.path}></img>}
+                    {imageClicked === true ? <p className="pTagSize">{pic.description}</p> : <img src={pic.path} className='image-borders'></img>}
                 </div>
                 <div className='bottom-margin'><div className='inline padding-right-270 traditional-text'><button onClick={() => likeCounter(pic)} className="inline margin-right-7 button-radius">❤️</button><p className='inline'>Likes: {pic.likes}</p></div><button onClick={() => deletePic(pic)} className='inline traditional-text button-radius'>Delete</button></div>
             </div>
