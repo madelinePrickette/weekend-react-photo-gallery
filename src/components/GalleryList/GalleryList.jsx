@@ -6,6 +6,7 @@ import './GalleryList.css';
 function GalleryList({galleryList, retrievePics}) {
     // Pass galleryList as a prop from App.jsx
 
+    // CLIENT PUT FUNCTION
     const likeCounter = (pic) => {
         // Here we need to pass in pic from the map, 
         // and this function is written in the same 
@@ -23,6 +24,9 @@ function GalleryList({galleryList, retrievePics}) {
             console.error(err);
         })
     }
+
+
+
 
     return(
         <>

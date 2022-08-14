@@ -18,7 +18,7 @@ function App() {
       method: 'GET',
       url: '/gallery'
     }).then( response => {
-      console.log(response.data);
+      console.log('logging response data...', response.data);
       setPicList(response.data);
       // Changing the state of PicList to the response data
       // response.data sorts out what we need from response.rows from the server.
@@ -27,6 +27,8 @@ function App() {
     })
   }
 
+  // logging to check that picList still contains the data we want after db transfer.
+  console.log('this is picList...', picList);
     return (
       <div className="App">
         <header className="App-header">
