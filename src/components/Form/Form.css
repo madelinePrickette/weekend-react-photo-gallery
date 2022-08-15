@@ -1,10 +1,11 @@
 .input-revamp {
     border: 1px solid #eeebf3;
-    color: #eeebf3;
+    color: #b6b3ba;
     padding: 5px;
     width: 300px;
     font-family: 'Rubik', sans-serif;
     margin-right: 5px;
+    border-radius: 5px;
 }
 
 ::placeholder {
@@ -20,5 +21,5 @@
     padding-top: 5px;
     padding-bottom: 5px;
     font-family: 'Rubik', sans-serif;
-    color: #464447
+    color: #464447;
 }

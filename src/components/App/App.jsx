@@ -35,6 +35,7 @@ function App() {
         <header className="App-header">
           <div className="align-items">
             <h1 className="App-title gradient-text marshmellow-text inline-block">Catstagram</h1>
+            <input placeholder="search" className="input-styling" value="search"/><button className='search-button'>🔍</button>
             <p className="margin-left p-tag">urstrayedaway</p>
             <img className="headerImage inline-block" src="images/profile-img.jpg"/>
           </div>
@@ -42,7 +43,10 @@ function App() {
         <Form retrievePics={retrievePics}/>
         <GalleryList galleryList={picList} retrievePics={retrievePics}/>
         {/* Passing to GalleryList to be used for mapping */}
-        <div className='bottom-div'><p className='text-size-color'>Created by Madeline Prickette</p></div>
+        <div className='bottom-div'>
+          <p className='text-size-color'>&copy; 2022 v0.1.0 Created by Madeline Prickette</p>
+          <p className='text-size-color'>Catstagram is powered by The Comfort of my Bed and jokes and Sleep</p>
+        </div>
       </div>
     );
 }
