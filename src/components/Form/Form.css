@@ -1,0 +1,24 @@
+.input-revamp {
+    border: 1px solid #eeebf3;
+    color: #eeebf3;
+    padding: 5px;
+    width: 300px;
+    font-family: 'Rubik', sans-serif;
+    margin-right: 5px;
+}
+
+::placeholder {
+    color: #b6b3ba;
+}
+
+.button-style {
+    border-radius: 50px;
+    border: 0px;
+    font-size: 14px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Rubik', sans-serif;
+    color: #464447
+}

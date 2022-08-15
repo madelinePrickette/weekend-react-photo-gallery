@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const galleryItems = require('../modules/gallery.data');
-const pool = require('../modules/pool');
+const pool = require('../modules/pool.js');
 
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
@@ -73,5 +73,27 @@ router.get('/', (req, res) => {
             res.sendStatus(500)
         });
 }); // END GET Route
+
+// POST ROUTE SERVER
+router.post('/', (req, res) => {
+    console.log('in /POST')
+    const pic = req.body;
+
+    const queryText =
+    `
+    INSERT INTO "gallery" ("path", "description", "likes")
+    VALUES ($1, $2, $3);
+    `;
+    const queryValues = [pic.path, pic.description, pic.likes];
+
+    pool.query(queryText, queryValues)
+        .then((results) => {
+            console.log(results)
+            res.sendStatus(201);
+        }).catch((err) => {
+            console.error('ERROR IN SERVER POST', err)
+            res.sendStatus(500);
+        })
+})
 
 module.exports = router;

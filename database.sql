@@ -13,6 +13,7 @@ VALUES
 ('images/eugene.jpg', 'black cat in a paper bag', 0),
 ('images/hammock.jpg', 'tan cat in a hammock', 0),
 ('images/pants-close.jpg', 'close up photo of an orange cat', 0),
+('images/pants-nap.jpg', 'orange cat napping', 0),
 ('images/pants-sun.jpg', 'orange cat sitting in the sun', 0),
 ('images/paw.jpg', 'tan cat licking its paw', 0),
 ('images/shower-cat.jpg', 'tan cat laying in a shower basin', 0),
