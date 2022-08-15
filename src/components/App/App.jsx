@@ -3,7 +3,7 @@ import './App.css';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList.jsx'
-import Form from '../Form/Form';
+import Form from '../Form/Form.jsx';
 
 function App() {
 

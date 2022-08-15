@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const galleryItems = require('../modules/gallery.data');
-const pool = require('../modules/pool');
+const pool = require('../modules/pool.js');
 
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
@@ -77,13 +77,12 @@ router.get('/', (req, res) => {
 // POST ROUTE SERVER
 router.post('/', (req, res) => {
     console.log('in /POST')
-    const pic = req.body
+    const pic = req.body;
 
     const queryText =
     `
     INSERT INTO "gallery" ("path", "description", "likes")
-    VALUES  
-    ($1, $2, $3);
+    VALUES ($1, $2, $3);
     `;
     const queryValues = [pic.path, pic.description, pic.likes];
 

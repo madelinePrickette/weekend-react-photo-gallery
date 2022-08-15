@@ -29,7 +29,7 @@ ul {
 }
 
 .padding-right-270 {
-    padding-right: 255px;
+    padding-right: 220px;
 }
 
 .margin-right-7 {
@@ -63,7 +63,14 @@ ul {
 
 .button-radius {
     border-radius: 50px;
-    border-width: 0px;
+    border: 0px;
+    font-size: 14px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Rubik', sans-serif;
+    color: #464447
 }
 
 .image-borders {

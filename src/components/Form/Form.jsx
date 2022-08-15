@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {useState} from 'react';
+import './Form.css';
 
 function Form({retrievePics}) {
     // in the future I would like to have a button called 
@@ -11,7 +12,8 @@ function Form({retrievePics}) {
     const [newLikes, setNewLikes] = useState(0);
 
     const handlePost = (event) => {
-        event.prevent.default();
+        event.preventDefault();
+        console.log('you posted a pic!');
 
         axios({
             method: 'POST',
@@ -22,7 +24,7 @@ function Form({retrievePics}) {
                 likes: newLikes
             }
         }).then( response =>{
-            console.log(response);
+            console.log(response.data);
             retrievePics();
             setNewPath('');
             setNewDescription('');
@@ -41,16 +43,19 @@ function Form({retrievePics}) {
         <>
             <form onSubmit={handlePost}>
                 <input 
+                    className="input-revamp"
+                    type="url"
                     placeholder="enter a url"
                     onChange={(event) => setNewPath(event.target.value)}
                     value={newPath}
                 />
                 <input 
+                    className='input-revamp'
                     placeholder="caption"
                     onChange={(event) => setNewDescription(event.target.value)}
                     value={newDescription}
                 />
-                <button>post</button>
+                <button type="submit" className='button-style'>post</button>
             </form>
         </>
     )
