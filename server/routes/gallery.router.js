@@ -62,7 +62,7 @@ router.get('/', (req, res) => {
     
     let queryText = 
     `
-    SELECT * FROM "gallery" ORDER BY "id";
+    SELECT * FROM "gallery" ORDER BY "id" DESC;
     `;
 
     pool.query(queryText)
