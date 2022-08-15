@@ -10,11 +10,16 @@ function Form({retrievePics}) {
     const [newPath, setNewPath] = useState('');
     const [newDescription, setNewDescription] = useState('');
     const [newLikes, setNewLikes] = useState(0);
+    // STATE VALUES
 
     const handlePost = (event) => {
         event.preventDefault();
+        // There was a bug here for like 40 minutes double check preventDefault is spelt right
         console.log('you posted a pic!');
 
+
+        // axios setting the state values to the values captured
+        // by this client side POST and sent in an object labled req.body
         axios({
             method: 'POST',
             url: '/gallery',
@@ -29,6 +34,8 @@ function Form({retrievePics}) {
             setNewPath('');
             setNewDescription('');
             setNewLikes(0);
+            // getting updated pics(refresh)
+            // resetting inputs after post
         }).catch( err => {
             console.log(err);
         })
@@ -42,6 +49,8 @@ function Form({retrievePics}) {
     return(
         <>
             <form onSubmit={handlePost}>
+                {/* I dont know if type="url" is necessary */}
+                {/* targeting values and setting state values */}
                 <input 
                     className="input-revamp"
                     type="url"

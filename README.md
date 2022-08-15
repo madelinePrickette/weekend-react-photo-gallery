@@ -41,3 +41,4 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 -profile image is a button to profile page
 -delete confirm modal
 -edit button to edit caption
+-HOST APP ON HEROKU

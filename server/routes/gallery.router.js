@@ -65,6 +65,8 @@ router.get('/', (req, res) => {
     SELECT * FROM "gallery" ORDER BY "id" DESC;
     `;
 
+    // results.rows is a bunch of data, it will be sorted by the client
+    // as response.data
     pool.query(queryText)
         .then( (results) => {
             res.send(results.rows);
@@ -78,6 +80,8 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     console.log('in /POST')
     const pic = req.body;
+    // re.body is what we are given by client
+
 
     const queryText =
     `
@@ -85,7 +89,7 @@ router.post('/', (req, res) => {
     VALUES ($1, $2, $3);
     `;
     const queryValues = [pic.path, pic.description, pic.likes];
-
+    // req.body is broken up here into path, description and likes
     pool.query(queryText, queryValues)
         .then((results) => {
             console.log(results)
