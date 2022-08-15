@@ -34,23 +34,17 @@ function Form({retrievePics}) {
             setNewPath('');
             setNewDescription('');
             setNewLikes(0);
-            // getting updated pics(refresh)
-            // resetting inputs after post
+            
         }).catch( err => {
             console.log(err);
         })
     } // end of post
+// getting updated pics(refresh)
+// resetting inputs after post
 
-
-    // DIVS ARE SET TO THE WIDTH OF AN IPHONE ------------------------------------------
-    // ANY PIC LARGER OR SMALLER THAN 412.5 PX -----------------------------------------
-    // WILL MESS WITH THE CSS SO I APOLOGIZE IF IT -------------------------------------
-    // LOOKS HORRIBLE I WANT TO FIX THAT IN THE FUTURE ---------------------------------
     return(
         <>
             <form onSubmit={handlePost}>
-                {/* I dont know if type="url" is necessary */}
-                {/* targeting values and setting state values */}
                 <input 
                     className="input-revamp"
                     type="url"
@@ -69,5 +63,6 @@ function Form({retrievePics}) {
         </>
     )
 }
-
+// {/* I dont know if type="url" is necessary */}
+// {/* targeting values and setting state values */}
 export default Form;

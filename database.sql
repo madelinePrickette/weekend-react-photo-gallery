@@ -2,7 +2,7 @@
 
 CREATE TABLE "gallery" (
 	"id" SERIAL PRIMARY KEY,
-	"path" VARCHAR(150),
+	"path" VARCHAR(250),
 	"description" VARCHAR(200),
 	"likes" INT,
 );

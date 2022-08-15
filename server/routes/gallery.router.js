@@ -80,8 +80,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     console.log('in /POST')
     const pic = req.body;
-    // re.body is what we are given by client
-
+    // req.body is what we are given by client
 
     const queryText =
     `
